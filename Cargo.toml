@@ -1,6 +1,6 @@
 [package]
 name = "TeleApi"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Ice MrAws.developer@gmail.com"]
 description = "A package for help telegram bots programmers"
