@@ -1,6 +1,7 @@
 use reqwest::{Client, Error};
 use serde::{Deserialize, Serialize};
 use anyhow::{anyhow, Result};
+use tokio;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Message {
@@ -85,6 +86,16 @@ macro_rules! auto_generate {
                 }
             }
         )*
+    };
+}
+
+macro_rules! params {
+    ($($key:expr => $value:expr),*) => {
+        &[
+            $(
+                ($key, $value),
+            )*
+        ]
     };
 }
 
